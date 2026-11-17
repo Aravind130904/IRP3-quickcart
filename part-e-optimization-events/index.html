@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickCart advanced JavaScript practical assignment">
+  <title>QuickCart | JavaScript Practical</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">QuickCart<span>.</span></a>
+      <span class="nav-note">Advanced JavaScript Practical</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">SMARTER SHOPPING EXPERIENCE</p>
+      <h1>Shop smarter.<br><span>Experience QuickCart.</span></h1>
+      <p>Explore practical examples of JavaScript performance optimization and DOM events.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TASK 1 · DEBOUNCING</p><h2>Product search</h2></div>
+        <span class="tag">500 ms delay</span>
+      </div>
+      <label for="searchInput">Search products</label>
+      <input id="searchInput" type="search" placeholder="Type laptop, mouse, monitor..." autocomplete="off">
+      <p id="searchStatus" class="status" aria-live="polite">Search waits until you stop typing.</p>
+      <ul id="searchResults" class="result-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TASK 2 · THROTTLING</p><h2>Scroll event monitor</h2></div>
+        <span class="tag">1000 ms interval</span>
+      </div>
+      <p>Scroll this page. The scroll handler runs at most once per second.</p>
+      <div class="metric"><strong id="scrollCount">0</strong><span>Throttled scroll events</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TASK 3 · MEMOIZATION</p><h2>Discount calculator</h2></div>
+        <span class="tag">Closure cache</span>
+      </div>
+      <div class="form-grid">
+        <div><label for="priceInput">Price (₹)</label><input id="priceInput" type="number" min="0" value="5000"></div>
+        <div><label for="discountInput">Discount (%)</label><input id="discountInput" type="number" min="0" max="100" value="10"></div>
+      </div>
+      <button id="calculateButton" class="button">Calculate discount</button>
+      <p id="discountResult" class="status" aria-live="polite">Enter values and calculate.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TASK 4 · EVENT BUBBLING</p><h2>Event propagation demo</h2></div>
+      </div>
+      <div id="bubbleParent" class="event-box">
+        <p><strong>Parent container</strong> — click the child button to see bubbling.</p>
+        <button id="bubbleButton" class="button">Click child button</button>
+      </div>
+      <button id="stopBubbleButton" class="button button-secondary">Click child and stop propagation</button>
+      <p id="bubbleStatus" class="status" aria-live="polite">Event messages will appear here.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">TASK 4 · EVENT DELEGATION</p><h2>Your shopping list</h2></div>
+        <span class="tag">One parent listener</span>
+      </div>
+      <p>Remove any product. A single click listener on the list handles all Remove buttons.</p>
+      <ul id="productList" class="product-list">
+        <li data-product-id="1"><span>Laptop <small>₹50,000</small></span><button class="remove-button" type="button">Remove</button></li>
+        <li data-product-id="2"><span>Mouse <small>₹800</small></span><button class="remove-button" type="button">Remove</button></li>
+        <li data-product-id="3"><span>Monitor <small>₹12,000</small></span><button class="remove-button" type="button">Remove</button></li>
+      </ul>
+      <p id="listStatus" class="status" aria-live="polite">3 products in the list.</p>
+    </section>
+
+    <section class="closing">
+      <h2>Built with modern JavaScript.</h2>
+      <p>Debouncing · Throttling · Memoization · Event Bubbling · Event Delegation</p>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 QuickCart · JavaScript Practical Assignment</div></footer>
+</body>
+</html>
